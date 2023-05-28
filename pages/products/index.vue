@@ -10,8 +10,8 @@
         </header>
         
         <div class="grid grid-cols-3 gap-10 m-16">
-            <div v-for="p in products">
-                <nuxt-link :to="`/products/${p.id}`">{{p.title}}</nuxt-link>
+            <div v-for="p in products" :key="p.id">
+                <ProductCard :product="p"/>
             </div>
         </div>
     </div>
